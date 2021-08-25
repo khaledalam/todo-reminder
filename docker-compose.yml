@@ -1,0 +1,41 @@
+version: '3'
+services:
+#  khaled_proxy_reverse_ssl:
+#    ...
+#      - PUID=500
+#      - PGID=500
+#    ports:
+#      - "443:443"
+#      - "80:80"
+
+  mongo:
+    container_name: mongo
+    image: mongo:3.6
+
+  client:
+    container_name: client
+    build: client
+    ports:
+      - "3000:8081"
+    links:
+      - server
+    depends_on:
+      - server
+    volumes:
+      - ./client:/starter
+      - /starter/node_modules
+
+  server:
+    container_name: server
+    build: server
+    ports:
+      - "8000:8000"
+    environment:
+     - MONGODB_URI=${MONGODB_URI}
+    links:
+     - mongo
+    depends_on:
+     - mongo
+    volumes:
+     - ./server:/starter
+     - /starter/node_modules
