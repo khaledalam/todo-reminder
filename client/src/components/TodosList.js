@@ -175,11 +175,11 @@ const TodosList = () => {
 
                     <div className="container-flud my-3">
                         <button className="btn btn-sm btn-warning mr-2"
-                                onClick={() => window.open("http://localhost:8000/seed", "_blank")}
+                                onClick={() => window.open("http://listmysolution.com:8000/seed", "_blank")}
                         >seed new 5 items
                         </button>
                         <button className="btn btn-sm btn-danger"
-                                onClick={() => window.open("http://localhost:8000/rm-f", "_blank")}
+                                onClick={() => window.open("http://listmysolution.com:8000/rm-f", "_blank")}
                         >remove all
                         </button>
                         <br/><br/>

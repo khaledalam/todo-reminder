@@ -60,7 +60,7 @@ exports.createTodo = async (req, res, next) => {
     const when = getParam(req, 'when');
 
     if (!note || note.trim().length < 1) {
-        alert('error empty note');
+        return res.status(400).json({"error": 'error empty note'});
         return;
     }
     if (new Date(when) < new Date()) {
@@ -138,7 +138,7 @@ exports.editTodo = async (req, res, next) => {
     console.log(id, note, 'active', active, when);
 
     if (!note || note.trim().length < 1) {
-        alert('error empty note');
+        return res.status(400).json({"error": 'error empty note'});
         return;
     }
 
