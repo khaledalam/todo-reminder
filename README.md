@@ -2,8 +2,10 @@
 
 A simple React-Redux-Node-Express app
 
-
 <br>
+> server side pagination 
+
+<br><br>
 
 demo:<br><br>
 <img src="demo.gif" >
