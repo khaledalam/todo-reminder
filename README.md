@@ -2,11 +2,6 @@
 
 A simple React-Redux-Node-Express app
 
-<br>
-
-client: http://listmysolution.com:3000/
-<br>
-server: http://listmysolution.com:8000/todos
 
 <br>
 
