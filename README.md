@@ -3,7 +3,7 @@
 A simple React-Redux-Node-Express app
 
 <br>
-- server side pagination 
+- server side pagination<br>
 - microservices (docker-compose)
 
 <br><br>
